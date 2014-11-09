@@ -23,7 +23,7 @@ class Tdl
       def save_todo(node, parent_node = nil)
         return unless node.name.eql?('TASK')
 
-        todo = Todo.find_or_initialize_by_id(node.attributes['ID'].value)
+        todo = Todo.find_or_initialize_by(id: node.attributes['ID'].value)
         todo.id = node.attributes['ID'].value
         todo.title = node.attributes['TITLE'].value
         todo.completed_at = parse_date(node.attributes['DONEDATE'].try(:value))
@@ -33,6 +33,8 @@ class Tdl
         todo.todo_category = category(node)
 
         todo.save!
+
+        print ".".colorize(:green)
       end
 
       def category(node)

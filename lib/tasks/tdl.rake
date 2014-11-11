@@ -6,7 +6,7 @@ namespace :tdl do
 
     # Tdl.parse_and_save("/home/hoa/Dropbox/Documents/Tada/AbstractEmma.tdl")
     Tdl.parse_and_save("/home/hoa/Dropbox/Documents/Tada/All.tdl")
-    # Tdl.parse_and_save("/home/hoa/Dropbox/Documents/Tada/All.done.tdl")
+    Tdl.parse_and_save("/home/hoa/Dropbox/Documents/Tada/All.done.tdl")
   end
 end
 

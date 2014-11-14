@@ -56,6 +56,7 @@ class Tdl
       def parse_date(date)
         return nil if date.blank?
 
+        # TODO Put the magic number 25569 into a constant.
         Time.at((date.to_f - 25569).days).utc
       end
   end

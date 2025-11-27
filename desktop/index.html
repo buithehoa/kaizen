@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electron Dark Mode Test</title>
+    
+    <style>
+      /* Pre-load dark background to match MUI's default dark theme (#121212).
+         This prevents the window from flashing white while the app launches.
+      */
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #121212; 
+        color: #ffffff;
+        height: 100%;
+        overflow: hidden; /* Optional: prevents native scrollbars */
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div id="root"></div>
+    
+    <script type="module" src="/src/renderer.tsx"></script>
+  </body>
+</html>
